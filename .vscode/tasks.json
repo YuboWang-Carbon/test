@@ -1,17 +1,10 @@
 {
     "version": "2.0.0",
-    "tasks": [
-        {          
-            "label": "gcc",
-            "type": "shell",
-            "command": "gcc",
-            "args": [
-                "-Wall","-std=c99","-g","${file}","-o","out"
-            ],
-            "group": {
-                  "kind": "build",
-                  "isDefault": true
-            }
-        }
+    "command": "gcc",
+    "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileBasenameNoExtension}.exe"
     ]
-  }
+}
